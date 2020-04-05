@@ -31,7 +31,7 @@ go get -d github.com/containerd/cri/...
 cd $GOPATH/src/github.com/containerd/cri
 git checkout $CRI_COMMIT
 wget https://raw.githubusercontent.com/jr-santos98/cri/master/hack/release.sh
-sudo chomd +x release.sh
+sudo chmod +x release.sh
 mv release.sh hack/
 make clean
 make release TARBALL_PREFIX=cri-containerd LOCAL_RELEASE=true VERSION=${VERSION} VENDOR=${ROOT}/vendor.conf
